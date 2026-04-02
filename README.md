@@ -31,18 +31,23 @@ Install
 2. Copy beep.py to:
    /home/pi/beep.py
 
-3. Add the settings from config_example.toml into:
+3. Make it executable by running this command
+   chmod +x /home/pi/beep.py
+
+4. Add the settings from config_example.toml into:
    /etc/pwnagotchi/config.toml
 
+```toml
 [main.plugins.ssidar]
 enabled = true
 targets = ["Verizon", "Comcast", "CenturyLink", "ATT", "xfinitywifi"]
 cooldown = 5
+```
 
-4. Restart Pwnagotchi:
+5. Restart Pwnagotchi:
    sudo systemctl restart pwnagotchi
 
-5. Watch logs:
+6. Watch logs:
    sudo journalctl -u pwnagotchi -f
 
 Notes
