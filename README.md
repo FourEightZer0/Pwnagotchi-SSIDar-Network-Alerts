@@ -11,16 +11,15 @@ SSIDar beeps every few minutes while any watched WiFi network is nearby.
 
 Default behavior
 ----------------
-- Uses GPIO17 for the active buzzer
+- Uses GPIO27 for the active buzzer
 - Double-beeps when a watched SSID is nearby
 - Beeps once every 300 seconds (5 minutes) total
 - Supports multiple target SSIDs
-- Supports partial matching or exact matching
 
 Files
 -----
-- SSIDar.py
-- config_example.toml
+- ssidar.py
+- beep.py
 
 Install
 -------
@@ -47,5 +46,3 @@ cooldown = 5
 Notes
 -----
 - This is written for an active buzzer on GPIO27 and GND.
-- match_mode = "contains" lets "ATT" match "ATT1234".
-- match_mode = "exact" requires an exact SSID name match.
