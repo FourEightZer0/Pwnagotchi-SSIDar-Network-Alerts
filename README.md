@@ -31,7 +31,7 @@ Install
 2. Copy beep.py to:
    /home/pi/beep.py
 
-3. Make it executable by running this command
+3. Make it executable by running this command:
    chmod +x /home/pi/beep.py
 
 4. Add the settings from config_example.toml into:
@@ -46,9 +46,6 @@ cooldown = 5
 
 5. Restart Pwnagotchi:
    sudo systemctl restart pwnagotchi
-
-6. Watch logs:
-   sudo journalctl -u pwnagotchi -f
 
 Notes
 -----
