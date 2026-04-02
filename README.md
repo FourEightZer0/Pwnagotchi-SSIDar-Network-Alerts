@@ -2,6 +2,8 @@
 ![Screenshot](Screenshot2.png)
 ![Screenshot](Screenshot3.png)
 
+This plugin is designed to work with jayofelony Pwnagotchi 2.9.5.4
+
 SSIDar for Pwnagotchi
 ====================
 

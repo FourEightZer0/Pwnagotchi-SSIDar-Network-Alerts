@@ -5,10 +5,7 @@ import pwnagotchi.plugins as plugins
 
 
 class SSIDar(plugins.Plugin):
-    __author__ = "OpenAI"
-    __version__ = "3.8"
-    __license__ = "GPL3"
-    __description__ = "SSIDar match + beep + UI message"
+    __author__ = "FourEightZer0"
 
     def __init__(self):
         self.options = {}
