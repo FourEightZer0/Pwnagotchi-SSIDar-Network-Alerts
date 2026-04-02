@@ -23,35 +23,28 @@ Files
 
 Install
 -------
-1. Copy SSIDar.py to:
+1. Copy ssidar.py to:
    /usr/local/share/pwnagotchi/custom-plugins/SSIDar.py
 
-2. Add the settings from config_example.toml into:
+2. Copy beep.py to:
+   /home/pi/beep.py
+
+3. Add the settings from config_example.toml into:
    /etc/pwnagotchi/config.toml
-
-3. Restart Pwnagotchi:
-   sudo systemctl restart pwnagotchi
-
-4. Watch logs:
-   sudo journalctl -u pwnagotchi -f
-
-Add this to your config.toml
 
 [main.plugins.ssidar]
 enabled = true
-gpio = 17
-interval = 300
-presence_timeout = 120
-match_mode = "contains"
-targets = [
-  "ATT",
-  "xfinitywifi",
-  "linksys",
-  "MyHotspot"
-]
+targets = ["Verizon", "Comcast", "CenturyLink", "ATT", "xfinitywifi"]
+cooldown = 5
+
+4. Restart Pwnagotchi:
+   sudo systemctl restart pwnagotchi
+
+5. Watch logs:
+   sudo journalctl -u pwnagotchi -f
 
 Notes
 -----
-- This is written for an active buzzer on GPIO17 and GND.
+- This is written for an active buzzer on GPIO27 and GND.
 - match_mode = "contains" lets "ATT" match "ATT1234".
 - match_mode = "exact" requires an exact SSID name match.
